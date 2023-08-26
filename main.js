@@ -29,3 +29,17 @@ $(window).on("DOMContentLoaded", () => {
 $("#joinUs form textarea").on("input", () => {
   $("#joinUs form p span").text(100 - $("#joinUs form textarea").val().length);
 });
+
+// $("aside nav a").on("click", (e) => {
+//   e.preventDefault();
+//   console.log($(`${e.target.getAttribute("href")}`).offset().top);
+//   $(`${e.target.getAttribute("href")}`).animate(
+//     { scrollTop: $(`${e.target.getAttribute("href")}`).offset().top - 50 },
+//     2000
+//   );
+// });
+
+$("aside nav a").on("click", (e) => {
+  e.preventDefault();
+  $("html, body").animate({ scrollTop: $(`${e.target.getAttribute("href")}`).offset().top - 50 }, 800);
+});
