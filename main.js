@@ -5,8 +5,8 @@ $("aside i").on("click", () => {
   $("aside i").toggleClass("closed");
 });
 
-$("#instructors article header").on("click", ({ target }) => {
-  $("#instructors article.active").removeClass("active");
+$("#details article header").on("click", ({ target }) => {
+  $("#details article.active").removeClass("active");
   target.parentElement.classList.toggle("active");
 });
 
@@ -29,15 +29,6 @@ $(window).on("DOMContentLoaded", () => {
 $("#joinUs form textarea").on("input", () => {
   $("#joinUs form p span").text(100 - $("#joinUs form textarea").val().length);
 });
-
-// $("aside nav a").on("click", (e) => {
-//   e.preventDefault();
-//   console.log($(`${e.target.getAttribute("href")}`).offset().top);
-//   $(`${e.target.getAttribute("href")}`).animate(
-//     { scrollTop: $(`${e.target.getAttribute("href")}`).offset().top - 50 },
-//     2000
-//   );
-// });
 
 $("aside nav a").on("click", (e) => {
   e.preventDefault();
