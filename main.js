@@ -26,8 +26,8 @@ $(window).on("DOMContentLoaded", () => {
   }, 1000);
 });
 
-$("#joinUs form textarea").on("input", () => {
-  $("#joinUs form p span").text(100 - $("#joinUs form textarea").val().length);
+$("#contact form textarea").on("input", () => {
+  $("#contact form p span").text(100 - $("#contact form textarea").val().length);
 });
 
 $("aside nav a").on("click", (e) => {
