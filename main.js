@@ -42,4 +42,6 @@ $("#joinUs form textarea").on("input", () => {
 $("aside nav a").on("click", (e) => {
   e.preventDefault();
   $("html, body").animate({ scrollTop: $(`${e.target.getAttribute("href")}`).offset().top - 50 }, 800);
+  $("aside nav ul").animate({ width: "toggle" }, 300);
+  $("aside i").toggleClass("closed");
 });
